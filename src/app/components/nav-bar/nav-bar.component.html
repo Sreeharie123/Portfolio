@@ -7,11 +7,11 @@
   <a class="fa-solid fa-bars mr-3 text-2xl md:hidden" *ngIf="!isTrue" (click)="open(isTrue)"></a>
   <a class="fa-solid fa-xmark mr-3 text-2xl md:hidden" *ngIf="isTrue"(click)="open(isTrue)"></a>
   <div class="max-md:hidden flex gap-6 text-lg">
-    <a href="" class="relative before:content-[''] before:w-0 before:h-1 before:bg-[#20c997] before:absolute before:-bottom-2 hover:before:w-full before:transition-all">Home</a>
-    <a href="" class="relative before:content-[''] before:w-0 before:h-1 before:bg-[#20c997] before:absolute before:-bottom-2 hover:before:w-full before:transition-all">About</a>
-    <a href="" class="relative before:content-[''] before:w-0 before:h-1 before:bg-[#20c997] before:absolute before:-bottom-2 hover:before:w-full before:transition-all">What I Do</a>
-    <a href="" class="relative before:content-[''] before:w-0 before:h-1 before:bg-[#20c997] before:absolute before:-bottom-2 hover:before:w-full before:transition-all">Portfolio</a>
-    <a href="" class="relative before:content-[''] before:w-0 before:h-1 before:bg-[#20c997] before:absolute before:-bottom-2 hover:before:w-full before:transition-all">Contact</a>
+    <a href="#home" class="relative before:content-[''] before:w-0 before:h-1 before:bg-[#20c997] before:absolute before:-bottom-2 hover:before:w-full before:transition-all">Home</a>
+    <a href="#about" class="relative before:content-[''] before:w-0 before:h-1 before:bg-[#20c997] before:absolute before:-bottom-2 hover:before:w-full before:transition-all">About</a>
+    <a href="#what" class="relative before:content-[''] before:w-0 before:h-1 before:bg-[#20c997] before:absolute before:-bottom-2 hover:before:w-full before:transition-all">What I Do</a>
+    <a href="#portfolio" class="relative before:content-[''] before:w-0 before:h-1 before:bg-[#20c997] before:absolute before:-bottom-2 hover:before:w-full before:transition-all">Portfolio</a>
+    <a href="#contact" class="relative before:content-[''] before:w-0 before:h-1 before:bg-[#20c997] before:absolute before:-bottom-2 hover:before:w-full before:transition-all">Contact</a>
   </div>
 </div>
 <div class="flex gap-3 md:gap-4 text-2xl">
@@ -20,10 +20,10 @@
   <a href="https://www.instagram.com/" target="_blank" class="fa-brands fa-instagram"></a>
 </div>
 <div [class.slowNav]="isTrue" class="bg-primary md:hidden w-full flex flex-col text-textGray px-4 gap-8 py-4 duration-1000 mt-16 absolute top-0 left-0 -translate-y-[414px] -z-50 pt-16">
-  <a href="" class="border-b">Home</a>
-  <a href="" class="border-b">About</a>
-  <a href="" class="border-b">What I Do</a>
-  <a href="" class="border-b">Portfolio</a>
-  <a href="">Contact</a>
+  <a href="#home" class="border-b" (click)="buttonClick(isTrue)">Home</a>
+  <a href="#about" class="border-b" (click)="buttonClick(isTrue)">About</a>
+  <a href="#what" class="border-b" (click)="buttonClick(isTrue)">What I Do</a>
+  <a href="#portfolio" class="border-b" (click)="buttonClick(isTrue)">Portfolio</a>
+  <a href="#contact" (click)="buttonClick(isTrue)">Contact</a>
 </div>
 </div>

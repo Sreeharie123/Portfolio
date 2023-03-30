@@ -13,6 +13,10 @@ export class NavBarComponent {
     this.isTrue=!booleanData
   }
 
+  buttonClick(data:boolean){
+    this.isTrue=!data
+  }
+
 
 
 darkNav:boolean=false

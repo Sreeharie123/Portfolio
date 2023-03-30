@@ -7,6 +7,8 @@ module.exports = {
     extend: {
       colors: {
         'textGray': 'rgb(249 250 251)',
+         icon:"#20c997"
+
       },
       backgroundColor:{
         primary:"rgb(17 24 39)",

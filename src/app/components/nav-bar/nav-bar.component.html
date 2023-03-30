@@ -7,17 +7,17 @@
   <a class="fa-solid fa-bars mr-3 text-2xl md:hidden" *ngIf="!isTrue" (click)="open(isTrue)"></a>
   <a class="fa-solid fa-xmark mr-3 text-2xl md:hidden" *ngIf="isTrue"(click)="open(isTrue)"></a>
   <div class="max-md:hidden flex gap-6 text-lg">
-    <a href="">Home</a>
-    <a href="">About</a>
-    <a href="">What I Do</a>
-    <a href="">Portfolio</a>
-    <a href="">Contact</a>
+    <a href="" class="relative before:content-[''] before:w-0 before:h-1 before:bg-[#20c997] before:absolute before:-bottom-2 hover:before:w-full before:transition-all">Home</a>
+    <a href="" class="relative before:content-[''] before:w-0 before:h-1 before:bg-[#20c997] before:absolute before:-bottom-2 hover:before:w-full before:transition-all">About</a>
+    <a href="" class="relative before:content-[''] before:w-0 before:h-1 before:bg-[#20c997] before:absolute before:-bottom-2 hover:before:w-full before:transition-all">What I Do</a>
+    <a href="" class="relative before:content-[''] before:w-0 before:h-1 before:bg-[#20c997] before:absolute before:-bottom-2 hover:before:w-full before:transition-all">Portfolio</a>
+    <a href="" class="relative before:content-[''] before:w-0 before:h-1 before:bg-[#20c997] before:absolute before:-bottom-2 hover:before:w-full before:transition-all">Contact</a>
   </div>
 </div>
 <div class="flex gap-3 md:gap-4 text-2xl">
-  <a href="" class="fa-brands fa-github"></a>
-  <a href="" class="fa-brands fa-linkedin-in"></a>
-  <a href="" class="fa-brands fa-instagram"></a>
+  <a href="https://github.com/Sreeharie123" target="_blank" class="fa-brands fa-github"></a>
+  <a href="https://www.linkedin.com/in/sreehari-e-725838265/" target="_blank" class="fa-brands fa-linkedin-in"></a>
+  <a href="https://www.instagram.com/" target="_blank" class="fa-brands fa-instagram"></a>
 </div>
 <div [class.slowNav]="isTrue" class="bg-primary md:hidden w-full flex flex-col text-textGray px-4 gap-8 py-4 duration-1000 mt-16 absolute top-0 left-0 -translate-y-[414px] -z-50 pt-16">
   <a href="" class="border-b">Home</a>

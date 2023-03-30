@@ -1,0 +1,48 @@
+
+.dark{
+  background-color: rgb(17 24 39);
+  animation: navBar 1s linear;
+}
+
+@keyframes navBar {
+
+  0%{
+    background-color: rgba(0, 0, 0, 0.195);
+  }
+  10%{
+    background-color: rgba(0, 0, 0, 0.219);
+  }
+  20%{
+    background-color: rgba(0, 0, 0, 0.341);
+  }
+  30%{
+    background-color: rgba(0, 0, 0, 0.596);
+  }
+  40%{
+    background-color: rgba(0, 0, 0, 0.604);
+  }
+  50%{
+    background-color: rgba(0, 0, 0, 0.76);
+  }
+  60%{
+    background-color: rgba(0, 0, 0, 0.814);
+  }
+  70%{
+    background-color: rgba(0, 0, 0, 0.879);
+  }
+  80%{
+    background-color: rgba(0, 0, 0, 0.945);
+  }
+  90%{
+    background-color: rgba(0, 0, 0, 0.967);
+  }
+  100%{
+    background-color: rgb(17 24 39);
+  }
+
+}
+
+.slowNav{
+  transform: translateY(-64px);
+}
+

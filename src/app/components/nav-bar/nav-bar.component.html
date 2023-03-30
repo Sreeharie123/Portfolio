@@ -1,0 +1,29 @@
+<div class="flex h-16 bg-primary text-textGray items-center justify-between px-4">
+
+<div class="flex-1 md:flex-none text-2xl font-bold">
+  <p>Sreehari</p>
+</div>
+<div>
+  <a class="fa-solid fa-bars mr-3 text-2xl md:hidden" *ngIf="!isTrue" (click)="open(isTrue)"></a>
+  <a class="fa-solid fa-xmark mr-3 text-2xl md:hidden" *ngIf="isTrue"(click)="open(isTrue)"></a>
+  <div class="max-md:hidden flex gap-6 text-lg">
+    <a href="">Home</a>
+    <a href="">About</a>
+    <a href="">What I Do</a>
+    <a href="">Portfolio</a>
+    <a href="">Contact</a>
+  </div>
+</div>
+<div class="flex gap-3 text-2xl">
+  <a href="" class="fa-brands fa-github"></a>
+  <a href="" class="fa-brands fa-linkedin-in"></a>
+  <a href="" class="fa-brands fa-instagram"></a>
+</div>
+</div>
+<div class="bg-primary md:hidden flex flex-col text-textGray px-4 gap-8 py-4 transition duration-1000" *ngIf="isTrue">
+  <a href="" class="border-b">Home</a>
+  <a href="" class="border-b">About</a>
+  <a href="" class="border-b">What I Do</a>
+  <a href="" class="border-b">Portfolio</a>
+  <a href="">Contact</a>
+</div>

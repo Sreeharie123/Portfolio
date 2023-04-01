@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import * as AOS from 'aos';
+import { ToastrService } from 'ngx-toastr';
 import { Services } from 'src/app/models/services';
 @Component({
   selector: 'app-profile',
@@ -10,6 +12,8 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     AOS.init();
   }
+
+  constructor(private tostr:ToastrService){}
 
   servcesList: Services[] = [
     {
@@ -75,7 +79,13 @@ export class ProfileComponent implements OnInit {
 
   ];
 
-  // ---------------------------------------------------typed js--------------------------------------------------------
+  // ---------------------------------------------------node mailer--------------------------------------------------------
 
+  onsubmit(data:NgForm){
+    this.tostr.success("Sending message is succuss full")
+    console.log(data)
+    data.reset()
+
+  }
 
 }

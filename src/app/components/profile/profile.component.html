@@ -5,11 +5,11 @@
   id="home"
 >
   <div
-    class="h-full w-full bg-gray-900/75 z-20 flex flex-col justify-center items-center text-textGray gap-2"
+    class="h-full w-full bg-gray-900/75 z-20 flex flex-col justify-center items-center text-textGray gap-3"
   >
     <p class="md:text-3xl text-xl">Hello</p>
-    <p class="md:text-4xl text-2xl">It's me Sreehari</p>
-    <p class="md:text-5xl text-3xl flex gap-3 justify-center">I'm a <ngx-typed-js [typeSpeed]="80" [startDelay]="500" [backSpeed]="40" [smartBackspace]="true" [loop]="true" [strings]="['FullStack Developer', 'Angular Developer','Node.js Developer']">
+    <p class="md:text-4xl text-2xl text-[#20c997] ">It's me Sreehari</p>
+    <p class="md:text-5xl text-3xl flex gap-3 justify-center"><ngx-typed-js [typeSpeed]="80" [startDelay]="500" [backSpeed]="40" [smartBackspace]="true" [loop]="true" [strings]="['FullStack Developer', 'Angular Developer','Node.js Developer']">
       <span class="typing"></span>
     </ngx-typed-js> </p>
 
@@ -579,9 +579,14 @@
         </div>
       </div>
     </div>
+    <a href="https://www.linkedin.com/in/sreehari-e-725838265/details/skills/"
+    class="w-fit h-fit md:hidden bg-icon text-gray-50 text-xl font-bold rounded-lg px-6 py-3 ml-28"
+  >
+    Read more
+  </a>
   </section>
-</div>
 
+</div>
 <!-------------------------------------------------Portfolio---------------------------------------------------------------------->
 
 <div class="flex items-center justify-center relative mt-10" id="portfolio">
@@ -601,7 +606,7 @@
         data-aos-duration="1000"
       >
         <div
-          class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden"
+          class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow"
         >
           <img
             class="lg:h-48 md:h-36 w-full object-cover object-center"
@@ -654,7 +659,7 @@
         data-aos-duration="1000"
       >
         <div
-          class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden"
+          class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow"
         >
           <img
             class="lg:h-48 md:h-36 w-full object-cover object-center"
@@ -709,7 +714,7 @@
         data-aos-duration="1000"
       >
         <div
-          class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden"
+          class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow"
         >
           <img
             class="lg:h-48 md:h-36 w-full object-cover object-center"
@@ -829,42 +834,53 @@
       <form
       #registerForm="ngForm"
       autocomplete="off"
+      (ngSubmit)="onsubmit(registerForm)"
       >
       <div class="relative mb-4">
         <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
         <input
+          #name="ngModel"
           type="text"
           id="name"
           name="name"
+          ngModel
           required
           class="w-full bg-white rounded border border-gray-300 focus:border-[#20c997] focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
         />
+        <br>
+        <span class="text-red-700" *ngIf="name.touched && name.invalid">* name is required</span>
       </div>
       <div class="relative mb-4">
         <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
         <input
-          #email
+          #email="ngModel"
           type="email"
           id="email"
           name="email"
+          ngModel
           required
           class="w-full bg-white rounded border border-gray-300 focus:border-[#20c997] focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
         />
+        <br>
+        <span class="text-red-700" *ngIf="email.touched && email.invalid">* Enter the email</span>
       </div>
       <div class="relative mb-4">
         <label for="message" class="leading-7 text-sm text-gray-600"
           >Message</label
         >
         <textarea
-          #message
+          #message="ngModel"
           id="message"
           name="message"
+          ngModel
           required
           class="w-full bg-white rounded border border-gray-300 focus:border-[#20c997] focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
         ></textarea>
+        <br>
+        <span class="text-red-700" *ngIf="message.touched && message.invalid">* write the message</span>
       </div>
-      <button
-        class="text-white w-full bg-[#20c997] border-0 py-2 px-6 focus:outline-none hover:bg-[#04f5ad] rounded text-lg"
+      <button [disabled]="registerForm.invalid" [ngClass]="{'bg-green-300':registerForm.invalid}"
+        class="text-white w-full bg-[#20c997] border-0 py-2 px-6 focus:outline-none rounded text-lg"
       >
         Send
       </button>

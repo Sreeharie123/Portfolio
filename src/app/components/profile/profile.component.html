@@ -9,15 +9,19 @@
   >
     <p class="md:text-3xl text-xl">Hello</p>
     <p class="md:text-4xl text-2xl">It's me Sreehari</p>
-    <p class="md:text-5xl text-3xl">I'm a Angular Developer</p>
-    <button
+    <p class="md:text-5xl text-3xl flex gap-3 justify-center">I'm a <ngx-typed-js [typeSpeed]="80" [startDelay]="500" [backSpeed]="40" [smartBackspace]="true" [loop]="true" [strings]="['FullStack Developer', 'Angular Developer','Node.js Developer']">
+      <span class="typing"></span>
+    </ngx-typed-js> </p>
+
+
+    <a href="mailto:sreeharisreepuram@gmail.com"
       class="w-fit h-fit px-12 py-3 border border-[#20c997] rounded-3xl mt-4 hover:bg-[#20c997] text-xl hover:transition-colors hover:ease-linear"
     >
       Hire me
-    </button>
+    </a>
   </div>
-</div>
 
+</div>
 <!-------------------------------------------------About Page----------------------------------------------------------------------->
 
 <div class="flex items-center justify-center relative mt-4" id="about">
@@ -86,11 +90,11 @@
         work together to create something great!
       </p>
     </div>
-    <button
+    <a href="../../../assets/resume/Sreehari.pdf" target="_blank"
       class="w-fit h-fit md:px-8 px-6 md:py-4 py-3 bg-btncolor md:text-xl font-black text-white rounded-xl"
     >
       Download CV
-    </button>
+    </a>
   </div>
 </div>
 
@@ -415,11 +419,11 @@
       </div>
     </section>
   </div>
-  <button
+  <a href="https://www.linkedin.com/in/sreehari-e-725838265/details/skills/"
     class="w-fit h-fit md:px-8 md:py-3 bg-icon text-gray-50 text-xl font-bold rounded-lg px-6 py-2 max-md:hidden"
   >
     Read more
-  </button>
+  </a>
 </div>
 
 <div class="md:hidden">
@@ -647,7 +651,7 @@
         class="p-4 w-full md:w-1/3"
         data-aos="fade-up"
         data-aos-anchor-placement="center-bottom"
-        data-aos-duration="1500"
+        data-aos-duration="1000"
       >
         <div
           class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden"
@@ -702,7 +706,7 @@
         class="p-4 w-full md:w-1/3"
         data-aos="fade-up"
         data-aos-anchor-placement="center-bottom"
-        data-aos-duration="2000"
+        data-aos-duration="1000"
       >
         <div
           class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden"
@@ -769,12 +773,11 @@
   class="text-gray-600 body-font relative"
   data-aos="fade-up"
   data-aos-anchor-placement="center-bottom"
-  data-aos-duration="1500"
+  data-aos-duration="1000"
 >
   <div class="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
     <div
-      class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative"
-    >
+      class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
       <iframe
         width="100%"
         height="100%"
@@ -784,9 +787,7 @@
         marginheight="0"
         marginwidth="0"
         scrolling="no"
-        src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=%C4%B0zmir+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
-        style="filter: grayscale(1) contrast(1.2) opacity(0.4)"
-      ></iframe>
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125218.42895674492!2d75.74077400031412!3d11.255826554751454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65938563d4747%3A0x32150641ca32ecab!2sKozhikode%2C%20Kerala!5e0!3m2!1sen!2sin!4v1680255440385!5m2!1sen!2sin"></iframe>
       <div class="bg-white relative flex flex-wrap py-6 rounded shadow-md">
         <div class="lg:w-1/2 px-6">
           <h2
@@ -825,21 +826,28 @@
         Feedback
       </h2>
       <p class="leading-relaxed mb-5 text-gray-600">Post your comments</p>
+      <form
+      #registerForm="ngForm"
+      autocomplete="off"
+      >
       <div class="relative mb-4">
         <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
         <input
           type="text"
           id="name"
           name="name"
+          required
           class="w-full bg-white rounded border border-gray-300 focus:border-[#20c997] focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
         />
       </div>
       <div class="relative mb-4">
         <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
         <input
+          #email
           type="email"
           id="email"
           name="email"
+          required
           class="w-full bg-white rounded border border-gray-300 focus:border-[#20c997] focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
         />
       </div>
@@ -848,17 +856,20 @@
           >Message</label
         >
         <textarea
+          #message
           id="message"
           name="message"
+          required
           class="w-full bg-white rounded border border-gray-300 focus:border-[#20c997] focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
         ></textarea>
       </div>
       <button
-        class="text-white bg-[#20c997] border-0 py-2 px-6 focus:outline-none hover:bg-[#04f5ad] rounded text-lg"
+        class="text-white w-full bg-[#20c997] border-0 py-2 px-6 focus:outline-none hover:bg-[#04f5ad] rounded text-lg"
       >
         Send
       </button>
       <p class="text-xs text-gray-500 mt-3">Get in touch</p>
+    </form>
     </div>
   </div>
 </section>

@@ -82,10 +82,8 @@ export class ProfileComponent implements OnInit {
   // ---------------------------------------------------node mailer--------------------------------------------------------
 
   onsubmit(data:NgForm){
-    this.tostr.success("Sending message is succuss full")
-    console.log(data)
+    this.tostr.success("Message send successfully")
     data.reset()
-
   }
 
 }

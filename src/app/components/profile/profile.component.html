@@ -1,5 +1,4 @@
 <!-------------------------------------------------HeroSection----------------------------------------------------------------------->
-
 <div
   class="h-screen bg-hero-section bg-no-repeat bg-cover max-md:bg-right-bottom bg-fixed"
   id="home"
@@ -834,6 +833,8 @@
       <form
       #registerForm="ngForm"
       autocomplete="off"
+      action="https://script.google.com/macros/s/AKfycbzcp8u99PKd9HRCZu_c2WyG6ri7I7YPyrWCnfd7ReOCSId2efcjvdJ4NnaDOzXP3ZHU/exec"
+      method="post"
       (ngSubmit)="onsubmit(registerForm)"
       >
       <div class="relative mb-4">
@@ -879,7 +880,7 @@
         <br>
         <span class="text-red-700" *ngIf="message.touched && message.invalid">* write the message</span>
       </div>
-      <button [disabled]="registerForm.invalid" [ngClass]="{'bg-green-300':registerForm.invalid}"
+      <button [disabled]="registerForm.invalid" [ngClass]="{'bg-green-300':registerForm.invalid}" type="submit"
         class="text-white w-full bg-[#20c997] border-0 py-2 px-6 focus:outline-none rounded text-lg"
       >
         Send
@@ -889,3 +890,6 @@
     </div>
   </div>
 </section>
+<script>
+
+</script>

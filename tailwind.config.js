@@ -17,9 +17,9 @@ module.exports = {
       },
       backgroundImage: {
         'hero-section': "url('https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
+        'hero-photo': "url('/src/assets/sreehari.jpg')"
       }
     },
   },
   plugins: [],
 }
-

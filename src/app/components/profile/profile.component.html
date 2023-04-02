@@ -1,10 +1,12 @@
 <!-------------------------------------------------HeroSection----------------------------------------------------------------------->
 <div
-  class="h-screen bg-hero-section bg-no-repeat bg-cover max-md:bg-right-bottom bg-fixed"
+  class="h-screen"
   id="home"
 >
+<img src="./../../../assets/sreehari.jpg" class="absolute top-0 inset-0 h-full w-full object-cover -z-50">
+
   <div
-    class="h-full w-full bg-gray-900/75 z-20 flex flex-col justify-center items-center text-textGray gap-3"
+    class="h-full w-full bg-gray-900/60 z-50 flex flex-col justify-center items-center text-textGray gap-3"
   >
     <p class="md:text-3xl text-xl">Hello</p>
     <p class="md:text-4xl text-2xl text-[#20c997] ">It's me Sreehari</p>
@@ -63,7 +65,7 @@
         I have a strong foundation in both front-end and back-end development,
         allowing me to create seamless and intuitive user experiences while
         ensuring the performance and security of the application. My expertise
-        in HTML, CSS,Tailwind,JavaScript,Angular, Node.js,Express.js,Rxjs and
+        in HTML, CSS,Tailwind,JavaScript,Angular, Node.js,Express.js,Rxjs,firebase and
         MongoDB makes me well-equipped to tackle any project, big or small.
       </p>
       <p
@@ -89,7 +91,7 @@
         work together to create something great!
       </p>
     </div>
-    <a href="../../../assets/resume/Sreehari.pdf" target="_blank"
+    <a href="../../../assets/resume/Sreehari.pdf" target="_blank" download="resume"
       class="w-fit h-fit md:px-8 px-6 md:py-4 py-3 bg-btncolor md:text-xl font-black text-white rounded-xl"
     >
       Download CV
@@ -418,7 +420,7 @@
       </div>
     </section>
   </div>
-  <a href="https://www.linkedin.com/in/sreehari-e-725838265/details/skills/"
+  <a href="https://www.linkedin.com/in/sreehari-e-725838265/details/skills/" target="_blank"
     class="w-fit h-fit md:px-8 md:py-3 bg-icon text-gray-50 text-xl font-bold rounded-lg px-6 py-2 max-md:hidden"
   >
     Read more
@@ -833,9 +835,7 @@
       <form
       #registerForm="ngForm"
       autocomplete="off"
-      action="https://script.google.com/macros/s/AKfycbzcp8u99PKd9HRCZu_c2WyG6ri7I7YPyrWCnfd7ReOCSId2efcjvdJ4NnaDOzXP3ZHU/exec"
-      method="post"
-      (ngSubmit)="onsubmit(registerForm)"
+      action="https://script.google.com/macros/s/AKfycbwdG0Px_0LzJyXStAv8CFXCMaabgrH6xhkiHviKKG8yfNP20QFV_1HzZrQHEcnqYSQS/exec" method="post"
       >
       <div class="relative mb-4">
         <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
@@ -880,7 +880,7 @@
         <br>
         <span class="text-red-700" *ngIf="message.touched && message.invalid">* write the message</span>
       </div>
-      <button [disabled]="registerForm.invalid" [ngClass]="{'bg-green-300':registerForm.invalid}" type="submit"
+      <button [disabled]="registerForm.invalid" [ngClass]="{'bg-green-300':registerForm.invalid}" (click)="onsubmit(registerForm)" type="submit"
         class="text-white w-full bg-[#20c997] border-0 py-2 px-6 focus:outline-none rounded text-lg"
       >
         Send
@@ -893,3 +893,4 @@
 <script>
 
 </script>
+

@@ -10,7 +10,6 @@ import { FormsModule } from '@angular/forms';
 import {NgxTypedJsModule} from 'ngx-typed-js';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-
 @NgModule({
   declarations: [
     AppComponent,
